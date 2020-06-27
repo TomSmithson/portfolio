@@ -64,6 +64,7 @@ body {
     border-radius: 50%;
     width: 15rem;
     height: 15rem;
+    overflow: auto;
 }
 
 /* * Projects Section * */
