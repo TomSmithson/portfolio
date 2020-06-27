@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Tom Smithson</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-item current">
+                <a href="/">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="/">Projects</a>
+            </div>
+            <div class="nav-item">
+                <a href="/">Timeline</a>
+            </div>
+        </div>
+        <div class="header">
+            <div class="intro">Hello, my name is Tom Smithson. I am studying Computer Science,
+                a Software and Full Stack Web Developer living in the UK.</div>
+            <div class="round_image">
+            </div>
+        </div>
+        <!-- Retrieve this data from a database
+        TODO -> Retrieve this data from a database
+        TODO -> Title/Image/Content
+        TODO -> SQL or NOSQL (Have already used nosql so might be worth showing my ability to use sql)
+        -->
+        <div class="projects">
+            <h3>Projects</h3>
+            <h5>Fitness App</h5>
+            <div class="project">
+                <div class="square_image">
+                </div>
+                <div class="description">
+                    <p>This is the description about the project that is in the image on the left. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eum earum, voluptas dolorem sed hic voluptatibus perspiciatis qui temporibus alias iste quasi ducimus tenetur. Doloribus quaerat impedit, culpa fuga aut pariatur, praesentium odit explicabo deleniti magnam mollitia dignissimos inventore corporis earum! Quo tempora est at earum deserunt corporis corrupti optio!</p>
+                </div>
+            </div>
+            <h5>Algorithms (Competitive Programming)</h5>
+            <div class="project">
+                <div class="square_image">
+                </div>
+                <div class="description">
+                    <p>This is the description about the project that is in the image on the left. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eum earum, voluptas dolorem sed hic voluptatibus perspiciatis qui temporibus alias iste quasi ducimus tenetur. Doloribus quaerat impedit, culpa fuga aut pariatur, praesentium odit explicabo deleniti magnam mollitia dignissimos inventore corporis earum! Quo tempora est at earum deserunt corporis corrupti optio!</p>
+                </div>
+            </div>
+        </div>
+    </div>
   </body>
 </html>
