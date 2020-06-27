@@ -20,7 +20,8 @@ body {
 
 /* * Nav Bar * */
 .nav {
-    margin-left: 65%;
+    position: fixed;
+    margin-left: 55%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
@@ -60,11 +61,16 @@ body {
 .round_image {
     margin: 0 auto;
     margin-top: 1rem;
-    border: 4px solid green;
     border-radius: 50%;
     width: 15rem;
     height: 15rem;
-    overflow: auto;
+    overflow: hidden;
+}
+
+.socials a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.3rem;
 }
 
 /* * Projects Section * */
@@ -75,13 +81,19 @@ body {
     grid-auto-rows: auto;
     grid-gap: 1rem;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .projects h5 {
     padding: 0;
     margin: 0;
     text-align: left;
+}
+
+.description p {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
 }
 
 .project {
@@ -91,7 +103,7 @@ body {
     grid-gap: 1rem;
     width: 100%;
     margin: 0 auto;
-    margin-top: 0rem;
+    margin-bottom: 2rem;  
 }
 
 .description {
@@ -101,8 +113,7 @@ body {
 
 .square_image {
     margin-top: 1rem;
-    border: 4px solid blue;
-    width: 40rem;
+    width: 30rem;
     height: 15rem;
     margin: 0 auto;
 }
