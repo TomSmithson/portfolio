@@ -3,6 +3,7 @@
   <head>
     <title>Tom Smithson</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0f1855ef43.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -12,15 +13,18 @@
                 <a href="/">Home</a>
             </div>
             <div class="nav-item">
-                <a href="/">Projects</a>
+                <a href="#skills_section">Skills</a>
+            </div>
+            <div class="nav-item">
+                <a href="#projects_section">Projects</a>
             </div>
             <div class="nav-item">
                 <a href="/">Timeline</a>
             </div>
         </div>
         <div class="header">
-            <div class="intro">Hello, my name is Tom Smithson. I am studying Computer Science,
-                a Software and Full Stack Web Developer living in the UK.</div>
+            <div><p>Hello, my name is Tom Smithson. I am studying Computer Science,
+                a Software and Full Stack Web Developer living in the UK.</p></div>
             <div class="round_image">
                 <img src="/images/tom.jpeg" width="100%" height="100% alt="Image of Tom Smithson">
             </div>
@@ -36,15 +40,53 @@
         TODO -> Title/Image/Content
         TODO -> SQL or NOSQL (Have already used nosql so might be worth showing my ability to use sql)
         -->
-        <div class="projects">
+        <div class="skills" id="skills_section">
+            <div class="skill">
+                <h5>Technical</h5>
+                <ul>
+                    <li>Git/Github</li>
+                    <li>Web Hosting</li>
+                    <li>Servers</li>
+                    <li>Linux</li>
+                    <li>VIM</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h5>Software</h5>
+                <ul>
+                    <li>Python</li>
+                    <li>Javascript (Node, React, Express, MongoDB)</li>
+                    <li>C/C++</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h5>Creative</h5>
+                <ul>
+                    <li>Photoshop</li>
+                    <li>XD</li>
+                    <li>After Effects</li>
+                    <li>Premier Pro</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h5>Certifications</h5>
+                <ul>
+                    <li>Comptia ITF+</li>
+                    <li>Google's Automating with Python (Coursera)</li>
+                </ul>
+            </div>
+        </div>
+<!--         
+        <div class="projects" id="projects_section">
             <h3>Projects</h3>
             <h5>Fitness App</h5>
             <div class="project">
                 <div class="square_image">
-                    <img src="/images/FitnessApp.png" width="100%" height="100%" alt="Image of Exercises Page on the Fitness App">
+                    <a href="http://exercisetracker.info"><img src="/images/FitnessApp.png" width="100%" height="100%" alt="Image of Exercises Page on the Fitness App"></a>
                 </div>
                 <div class="description">
-                    <p>This is the description about the project that is in the image on the left. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eum earum, voluptas dolorem sed hic voluptatibus perspiciatis qui temporibus alias iste quasi ducimus tenetur. Doloribus quaerat impedit, culpa fuga aut pariatur, praesentium odit explicabo deleniti magnam mollitia dignissimos inventore corporis earum! Quo tempora est at earum deserunt corporis corrupti optio!</p>
+                    <p>This is my Fitness App and I have created this with React, Mongo, Node and Express. The motivation behind this project was to build a simple exercise tracking application so that my girlfriend could use it to track her fitness activities. When looking at the market, it was full of over complicated applications that didn't offer a simply solution. It was my first project in React and I learnt as I went along. In the future I will be looking into more React tutorials and projects as it is super useful!</p>
+                    <a href="https://github.com/TomSmithson/FitnessApp.git">&nbsp;<p>Github Repository Link</p></a>
                 </div>
             </div>
             <h5>Algorithms (Competitive Programming)</h5>
@@ -56,16 +98,7 @@
                     <p>This is the description about the project that is in the image on the left. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eum earum, voluptas dolorem sed hic voluptatibus perspiciatis qui temporibus alias iste quasi ducimus tenetur. Doloribus quaerat impedit, culpa fuga aut pariatur, praesentium odit explicabo deleniti magnam mollitia dignissimos inventore corporis earum! Quo tempora est at earum deserunt corporis corrupti optio!</p>
                 </div>
             </div>
-        </div>
-        <div class="skills">
-            <h3>Skills</h3>
-            <div class="type"><strong>Technical</strong>: Git, Github, Web Hosting, Servers, Linux, VIM</div>
-            <div class="type"><strong>Software</strong>: Python, Javascript (Node, React, Express, MongoDB), C, C++
-            </div>
-            <div class="type"><strong>Creative</strong>: Photoshop, XD, After Effects, Premier Pro
-            </div>
-            <div class="type"><strong>Certifications</strong>: Comptia ITF+, Google’s Automating with Python (Coursera)</div>
-        </div>
+        </div> -->
     </div>  
   </body>
 </html>
