@@ -82,6 +82,7 @@ a {
     width: 15rem;
     height: 15rem;
     overflow: hidden;
+    margin-bottom: 1.2rem;
 }
 
 .socials a {
@@ -90,49 +91,8 @@ a {
     padding: 0.3rem;
 }
 
-/* * Projects Section * */
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: auto;
-    grid-gap: 1rem;
-    width: 100%;
-    margin-top: 1.5rem;
-}
-
-.projects h5 {
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.description p {
-    padding: 0;
-    margin: 0;
-    text-align: justify;
-}
-
-.project {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-    grid-gap: 1rem;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 2rem;  
-}
-
-.description {
-    padding: 0;
-    margin: 0;
-}
-
-.square_image {
-    margin-top: 1rem;
-    width: 30rem;
-    height: 15rem;
-    margin: 0 auto;
+.socials a:hover {
+    color: skyblue;
 }
 
 .skills {
@@ -142,6 +102,7 @@ a {
     grid-gap: 1rem;
     width: 100%;
     margin-top: 0.5rem;
+    margin-bottom: 5rem;
 }
 
 .skill h5 {
@@ -160,10 +121,77 @@ a {
 }
 
 .skill ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: black; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
     width: 1rem; 
-    /* margin-left: -1rem; */
-  }
+}
+
+.project {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5em;
+}
+
+.project > .projectText {
+    font-size: 0.8rem;
+    position: absolute;
+    text-align: left;
+    top: 85;
+}
+
+.project > .projectText a {
+    text-decoration: none;
+    color: skyblue;
+}
+
+.project > .projectText > .underline {
+    display: block;
+    background-color: skyblue;
+    height: 3px;
+    width: 61px;
+    margin-top: 5px;
+}
+
+.project > .projectText > .about {
+    width: 30%;
+}
+
+.project > .projectText > .about p {
+    font-size: 1rem;
+}
+
+.project > .projectImg {
+    width: 65%;
+    float: right;
+    box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.15);
+}
+
+
+.project > .projectTextRight {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 85;
+    right: 0;
+    text-align: right;
+}
+
+.project > .projectTextRight a {
+    text-decoration: none;
+    color: skyblue;
+}
+
+.project > .projectTextRight > .underline {
+    display: block;
+    background-color: skyblue;
+    height: 3px;
+    width: 61px;
+    margin-top: 5px;
+}
+
+.project > .projectImgRight {
+    width: 65%;
+    float: left;
+    box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.15);
+}
