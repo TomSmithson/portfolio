@@ -1,9 +1,8 @@
 body {
   padding: 50px;
-  /* font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-family: 'Work Sans', sans-serif;
+  font-style: normal;
   background-color: #FDFDFD;
-  /* color: #606060; */
   color: #5a5959;
   letter-spacing: 0.05rem;
 }
@@ -36,7 +35,6 @@ a {
 
 /* * Nav Bar * */
 .nav {
-    /* position: fixed; */
     margin-left: 65%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -83,6 +81,7 @@ a {
     height: 15rem;
     overflow: hidden;
     margin-bottom: 1.2rem;
+    box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.15);
 }
 
 .socials a {
@@ -158,6 +157,7 @@ a {
     width: 30%;
 }
 
+
 .project > .projectText > .about p {
     font-size: 1rem;
 }
@@ -182,12 +182,24 @@ a {
     color: skyblue;
 }
 
-.project > .projectTextRight > .underline {
+.project > .projectTextRight > .underlineRight {
     display: block;
     background-color: skyblue;
     height: 3px;
     width: 61px;
-    margin-top: 5px;
+    position: absolute;
+    right: 0;
+}
+
+.project > .projectTextRight > .aboutRight {
+    width: 90%;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+.project > .projectTextRight > .aboutRight p {
+    font-size: 1rem;
 }
 
 .project > .projectImgRight {
