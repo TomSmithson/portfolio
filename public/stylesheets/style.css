@@ -259,7 +259,6 @@ a {
 
 @media screen and (max-width: 480px) {
     .container {
-        overflow-x: hidden;
         width: 100%;
         font-size: 0.8rem;
     }
