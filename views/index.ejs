@@ -7,7 +7,7 @@
     <meta name="HandheldFriendly" content="true">
     <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0f1855ef43.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0f1855ef43.js" SameSite="Secure" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -76,7 +76,24 @@
                 </ul>
             </div>
         </div>
-        <div class="test">
+        <% for (let i = 0; i < projects.length; i++) { %>
+            <div class="test">
+                <div class="text">
+                    <div class="text2">
+                        <h1><%= projects[i]["title"]%></h1>
+                    </div>
+                    <div class="link">
+                        <a href="<%= projects[i]["link"]%>"><h5>View Project</h5></a>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="text3">
+                        <p><%= projects[i]["description"]%></p>
+                    </div>
+                </div>
+                <img src="<%= projects[i]["image_path"]%>" alt="Project Image Background"/>
+            </div>
+        <% } %>
+        <!-- <div class="test">
             <div class="text">
                 <div class="text2">
                     <h1>Fitness App</h1>
@@ -89,8 +106,7 @@
                     <p>This is my Fitness App and I have created this with React, Mongo, Node and Express. The motivation behind this project was to build a simple exercise tracking application so that my girlfriend could use it to track her fitness activities. When looking at the market, it was full of over complicated applications that didn't offer a simply solution. It was my first project in React and I learnt as I went along. In the future I will be looking into more React tutorials and projects as it is super useful!</p>
                 </div>
             </div>
-            <img src="/images/FitnessApp.png" alt="Image of Fitness App Homepage">
-
+            <img src="/images/FitnessApp.png" alt="Image of Fitness App Homepage"> -->
         </div>
         <div class="footer">
             <p>Tom Smithson Portfolio &copy 2020 </p>
