@@ -1,3 +1,4 @@
+// Imports
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -6,7 +7,7 @@ const cors = require("cors");
 const Pool = require("pg").Pool;
 const app = express();
 
-// view engine setup
+// View Engine Setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -25,46 +26,50 @@ const pool = new Pool({
     database: "portfolio"
 });
 
-// const newProject = pool.query("INSERT INTO project (title, image_path, description) VALUES($1, $2, $3)", ["Title", "/images/FitnessApp.png", "Description"])
-//     .then(res => console.log(res))
-//     .catch(err => console.log(err));
-
 // Routes
 app.get("/", async (req, res, next) => {
     const projects = await pool.query("SELECT * FROM project");
     res.render("index", {projects: projects["rows"]});
 });
 
+// Adding a new Project
 app.get("/add", (req, res, next) => {
     res.render("update");
 });
 
 app.post("/add", (req, res, next) => {
-    console.log(req.body);
-    // Insert this new Project into the database
     pool.query("INSERT INTO project (title, description, link, image_path) VALUES($1, $2, $3, $4)", [req.body.title, req.body.description, req.body.image_path, req.body.link])
         .then(res => console.log("Successfully Added"))
-        .catch(err => console.log("Error Adding"));
+        .catch(err => console.log(err));
     res.redirect("/");
 });
 
+// Removing a Project
+app.get("/remove", (req, res, next) => {
+    res.render("remove");
+});
 
-// catch 404 and forward to error handler
+app.post("/remove", (req, res, next) => {
+    pool.query("DELETE FROM project WHERE title='" + req.body.title + "';")
+        .then(res => console.log("Successfully Deleted"))
+        .catch(err => console.log(err));
+    res.redirect("/");
+})
+
+// Error Handling
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
   res.status(err.status || 500);
   res.render('error');
 });
 
+// Starting the Server
 app.listen(3000, () => {
     console.log("Listening on port 3000");
 })
