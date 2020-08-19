@@ -29,6 +29,7 @@ const pool = new Pool({
 // Routes
 app.get("/", async (req, res, next) => {
     const projects = await pool.query("SELECT * FROM project");
+    console.log(projects);
     res.render("index", {projects: projects["rows"]});
 });
 
