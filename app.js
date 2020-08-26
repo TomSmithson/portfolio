@@ -34,39 +34,39 @@ app.get("/", async (req, res, next) => {
 });
 
 // Adding a new Project
-app.get("/add", (req, res, next) => {
-    res.render("add");
-});
+//app.get("/add", (req, res, next) => {
+//    res.render("add");
+//});
 
-app.post("/add", (req, res, next) => {
-    pool.query("INSERT INTO project (title, description, link, image_path) VALUES($1, $2, $3, $4)", [req.body.title, req.body.description, req.body.link, req.body.image_path])
-        .then(res => console.log("Successfully Added"))
-        .catch(err => console.log(err));
-    res.redirect("/");
-});
+//app.post("/add", (req, res, next) => {
+//    pool.query("INSERT INTO project (title, description, link, image_path) VALUES($1, $2, $3, $4)", [req.body.title, req.body.description, req.body.link, req.body.image_path])
+//        .then(res => console.log("Successfully Added"))
+//        .catch(err => console.log(err));
+//    res.redirect("/");
+//});
 
 // Removing a Project
-app.get("/remove", (req, res, next) => {
-    res.render("remove");
-});
+//app.get("/remove", (req, res, next) => {
+//    res.render("remove");
+//});
 
-app.post("/remove", (req, res, next) => {
-    pool.query("DELETE FROM project WHERE title='" + req.body.title + "';")
-        .then(res => console.log("Successfully Deleted"))
-        .catch(err => console.log(err));
-    res.redirect("/");
-})
+//app.post("/remove", (req, res, next) => {
+//    pool.query("DELETE FROM project WHERE title='" + req.body.title + "';")
+//        .then(res => console.log("Successfully Deleted"))
+//        .catch(err => console.log(err));
+//    res.redirect("/");
+//})
 
-app.get("/update", (req, res, next) => {
-    res.render("update")
-})
+//app.get("/update", (req, res, next) => {
+//    res.render("update")
+//})
 
-app.post("/update", (req, res, next) => {
-    pool.query("UPDATE project SET description='" + req.body.description + "' WHERE title='" + req.body.title + "';")
-        .then(res => console.log("Successfully Updated"))
-        .catch(err => console.log(err))
-    res.redirect("/");
-})
+//app.post("/update", (req, res, next) => {
+//    pool.query("UPDATE project SET description='" + req.body.description + "' WHERE title='" + req.body.title + "';")
+//        .then(res => console.log("Successfully Updated"))
+//        .catch(err => console.log(err))
+//    res.redirect("/");
+//})
 
 // Error Handling
 app.use(function(req, res, next) {
