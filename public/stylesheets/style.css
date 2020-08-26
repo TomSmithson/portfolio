@@ -211,6 +211,12 @@ a {
     box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.15);
 }
 
+.test > iframe {
+    width: 43.5%;
+    height: 149%;
+    box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.15);
+}
+
 @media screen and (max-width: 1250px) {
     .nav {
         margin-left: 50%;
