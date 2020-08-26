@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tom Smithson | Add</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+        <form method="POST" action="/add">
+            <p>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Title" required/>
+            </p>
+            <p>
+                <label for="description">Description</label>
+                <input type="textarea" id="description" name="description" placeholder="Description" required/>
+            </p>
+            <p>
+                <label for="image_path">Image Path</label>
+                <input type="text" id="image_path" name="image_path" placeholder="Image Path" required/>
+            </p>
+            <p>
+                <label for="link">Link</label>
+                <input type="text" id="link" name="link" placeholder="Link" required/>
+            </p>
+            <input type="submit"/>
+        </form>
+    </div>
+  </body>
+</html>
